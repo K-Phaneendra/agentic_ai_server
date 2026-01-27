@@ -4,6 +4,7 @@ from src.agents.summarizer_agent import SummarizerAgent
 from src.agents.sales_agent import SalesAgent
 from src.agents.news_agent import NewsAgent
 from src.agents.support_agent import SupportAgent
+from src.agents.anomaly_agent import AnomalyAgent
 from src.memory import ConversationMemory
 
 class Orchestrator:
@@ -16,6 +17,7 @@ class Orchestrator:
             "sales": SalesAgent(),
             "news": NewsAgent(),
             "support": SupportAgent(),
+            "anomaly": AnomalyAgent(),
         }
 
     async def handle(self, session_id: str, text: str):

@@ -13,6 +13,11 @@ Allowed targets:
 - sales
 - news
 - support
+- anomaly
+
+Details of targets:
+- sales: related to sales information
+- anomaly: identify anomaly of a specific metric
 
 Rules:
 - Return ONLY valid JSON
@@ -21,7 +26,7 @@ Rules:
 
 Output format:
 [
-  {"target": "sales|news|support", "query": "specific task"}
+  {"target": "sales|news|support|anomaly", "query": "specific task"}
 ]
 """
 

@@ -1,8 +1,13 @@
+import os
+from pathlib import Path
 from dotenv import load_dotenv
+
+BASE_DIR = Path(__file__).resolve().parents[1]
+env_file = os.path.join(BASE_DIR, ".env")
+load_dotenv(env_file)
+
 from fastapi import FastAPI
 from src.orchestrator import Orchestrator
-
-load_dotenv()
 
 app = FastAPI(title="AgenticAI with MCP Servers")
 

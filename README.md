@@ -4,8 +4,14 @@
 ```
 conda create -p ./venv python==3.13.9 --yes
 conda activate ./venv
-python --version
 pip install -r ./requirements.txt
+```
+
+### Install packages
+```
+conda activate ./venv
+pip install <package_name>
+pip list --format=freeze > requirements.txt
 ```
 
 ### Run
